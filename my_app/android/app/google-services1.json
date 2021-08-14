@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1013088868692",
+    "project_id": "myresume-9762a",
+    "storage_bucket": "myresume-9762a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013088868692:android:d626e232b1b51f314190c1",
+        "android_client_info": {
+          "package_name": "com.example.my_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013088868692-oa3mccsbl782mluporbjv1er1cfocmoq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpJ8qZQ8N3lguq_w2WH3eocE5a8bmbjY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013088868692-oa3mccsbl782mluporbjv1er1cfocmoq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

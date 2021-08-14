@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "595520461985",
+    "firebase_url": "https://geetaxi-bbdf1-default-rtdb.firebaseio.com",
+    "project_id": "geetaxi-bbdf1",
+    "storage_bucket": "geetaxi-bbdf1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595520461985:android:fe209408153d5e8ce264e0",
+        "android_client_info": {
+          "package_name": "com.example.my_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595520461985-t7pu1n49eoe63205q7g2vt9u3m8c54cm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYOVp32gYwSKNO8BSG8eLmgMzZgskZinI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595520461985-t7pu1n49eoe63205q7g2vt9u3m8c54cm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
