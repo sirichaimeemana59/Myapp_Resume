@@ -39,7 +39,7 @@ dependencies:
   flutter_launcher_icons: ^0.9.0
   flutter_sheet_localization: ^5.1.0
   get: ^4.1.4
-  hexcolor: ^2.0.3
+  hexcolor: ^2.0.5
   dotted_border: ^2.0.0
   permission_handler: ^8.0.1
   barcode: ^2.1.0
@@ -50,6 +50,7 @@ dependencies:
   path_provider: ^2.0.2
   path: ^1.8.0
   flutter_map: ^0.13.1
+  geolocator: ^7.4.0
   #firebase_core: ^1.3.0
   #firebase_database: ^7.1.1
   #End Packget Locate Database

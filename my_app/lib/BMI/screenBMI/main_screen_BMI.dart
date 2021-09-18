@@ -41,80 +41,79 @@ class _MainScreenBMIState extends State<MainScreenBMI> {
             height: MediaQuery.of(context).size.height,
             color: HexColor('#22121F'),
             padding: EdgeInsets.only(top: 10, left: 8, right: 8),
-            child: Expanded(
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    cardMale(),
+                    cardFemale(),
+                  ],
+                ),
+                SizedBox(
+                  height: 18,
+                ),
+                Container(
+                  child: Row(
                     children: [
-                      cardMale(),
-                      cardFemale(),
+                      cardHeight(),
                     ],
                   ),
-                  SizedBox(
-                    height: 18,
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                Container(
+                  padding: EdgeInsets.only(top: 10, left: 8, right: 8),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      cardWeight(),
+                      cardAge(),
+                    ],
                   ),
-                  Container(
-                    child: Row(
-                      children: [
-                        cardHeight(),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 8,
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(top: 10, left: 8, right: 8),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        cardWeight(),
-                        cardAge(),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: FlatButton(
-                      onPressed: () {
-                        CalculatorBrain calc =
-                            CalculatorBrain(height: height, weight: weight);
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ResultBMI(
-                              bmiResult: calc.calculateBMI(),
-                              resultText: calc.getResult(),
-                              interpretation: calc.getInterpretation(),
-                            ),
-                          ),
-                        );
-                      },
-                      child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          color: HexColor('#D8013C'),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'bmi'.tr,
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            )
-                          ],
+                ),
+                SizedBox(
+                  height: 14,
+                ),
+                FlatButton(
+                  onPressed: () {
+                    CalculatorBrain calc =
+                        CalculatorBrain(height: height, weight: weight);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ResultBMI(
+                          bmiResult: calc.calculateBMI(),
+                          resultText: calc.getResult(),
+                          interpretation: calc.getInterpretation(),
                         ),
                       ),
+                    );
+                  },
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 80,
+                    decoration: BoxDecoration(
+                      color: HexColor('#D8013C'),
+                      borderRadius: BorderRadius.circular(12),
                     ),
-                  )
-                ],
-              ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'bmi'.tr,
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),

@@ -70,7 +70,16 @@ class TextTranslations extends Translations {
           'weight': 'Weight',
           'age': 'Age',
           'height': 'Height',
-          'result': 'Result your'
+          'result': 'Result your',
+          'bmi1':
+              'You have a higher than normal body weight. Try to exercise more.',
+          'bmi2': 'You have a normal body weight. Good job!',
+          'bmi3':
+              'You have a lower than normal body weight. You can eat a bit more.',
+          'body1': 'Overweight',
+          'body2': 'Normal',
+          'body3': 'Underweight',
+          'wather': 'Wather',
         },
         'th': {
           'app_name': 'ศิริชัย',
@@ -140,7 +149,14 @@ class TextTranslations extends Translations {
           'weight': 'น้ำหนัก',
           'age': 'อายุ',
           'height': 'ส่วนสูง',
-          'result': 'ผลวิเคราะห์'
+          'result': 'ผลวิเคราะห์',
+          'bmi1': 'คุณมีน้ำหนักตัวสูงกว่าปกติ พยายามออกกำลังกายให้มากขึ้น',
+          'bmi2': 'คุณมีน้ำหนักตัวปกติ ทำได้ดีมาก!',
+          'bmi3': 'คุณมีน้ำหนักตัวต่ำกว่าปกติ กินอีกหน่อยก็ได้',
+          'body1': 'น้ำหนักเกิน',
+          'body2': 'ปกติ',
+          'body3': 'น้ำหนักน้อย',
+          'wather': 'สภาพอากาศ',
         }
       };
 }
