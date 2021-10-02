@@ -5,13 +5,17 @@ class Location {
   double longtitue;
 
   Future<void> getLocation() async {
-    try {
-      Position position = await Geolocator.getCurrentPosition(
-          desiredAccuracy: LocationAccuracy.low);
-      latitude = position.latitude;
-      longtitue = position.longitude;
-    } catch (e) {
-      print(e);
+    var permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      try {
+        Position position = await Geolocator.getCurrentPosition(
+            desiredAccuracy: LocationAccuracy.low);
+        latitude = position.latitude;
+        longtitue = position.longitude;
+      } catch (e) {
+        print(e);
+      }
     }
+    // return await Geolocator.getCurrentPosition();
   }
 }

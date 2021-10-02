@@ -16,6 +16,13 @@ class MainWhather extends StatefulWidget {
 class _MainWhatherState extends State<MainWhather> {
   double latitude;
   double longtitue;
+  var longitude;
+  var latgitude;
+  var discriptionText;
+  var temperatureText;
+  var conditionText;
+  var citiNameText;
+
   void initState() {
     super.initState();
     getDataLocation();
@@ -31,7 +38,7 @@ class _MainWhatherState extends State<MainWhather> {
 
   void getData() async {
     http.Response response = await http.get(Uri.parse(
-        'https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longtitue&appid=$apiKey'));
+        'https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=$apiKey'));
 
     if (response.statusCode == 200) {
       String data = response.body;
@@ -43,13 +50,11 @@ class _MainWhatherState extends State<MainWhather> {
       double temperature = decodeData['main']['temp'];
       int condition = decodeData['weather'][0]['id'];
       String citiName = decodeData['name'];
-
-      print(longitude);
-      print(latgitude);
-      print(discription);
-      print(temperature);
-      print(condition);
-      print(citiName);
+      setState(() {
+        discriptionText = discription;
+        temperatureText = temperature;
+        citiNameText = citiName;
+      });
     } else {
       print(response.statusCode);
     }
@@ -73,6 +78,13 @@ class _MainWhatherState extends State<MainWhather> {
                 },
                 child: Text('Get Location'),
               ),
+              Column(
+                children: [
+                  Text(citiNameText.toString()),
+                  Text(discriptionText.toString()),
+                  Text(temperatureText.toString()),
+                ],
+              )
             ],
           ),
         ),
